@@ -1,10 +1,14 @@
-import react from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Home from './containers/Home/Home';
 import About from './containers/About/About';
+import UnderConstruction from './containers/UnderConstruction/UnderConstruction';
+import Error404 from './containers/Error404/Error404';
+
 import Navbar from './NavBar/NavBar';
 
-const Router = () => {
+const Routes = () => (
   <Router>
     <Navbar />
     <Switch>
@@ -15,4 +19,6 @@ const Router = () => {
       <Route component={Error404} />
     </Switch>
   </Router>
-}
+  )
+
+export default Routes;
